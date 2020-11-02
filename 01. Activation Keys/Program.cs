@@ -30,7 +30,7 @@ namespace _01._Activation_Keys
                 {
                     if(codeGenerate.Contains(commands[1]))
                     {
-                        messages.AppendLine($"{codeGenerate} contains {commands[1]}.");
+                        messages.AppendLine($"{codeGenerate} contains {commands[1]}");
                     }
                     else
                     {
