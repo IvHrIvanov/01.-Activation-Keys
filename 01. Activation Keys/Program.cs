@@ -20,15 +20,15 @@ namespace _01._Activation_Keys
                 string currentLetter = codeGenerate[i].ToString();
                 corection.Add(currentLetter);
             }
-           
-            while (commands[0]!= "Generate")
+
+            while (commands[0] != "Generate")
             {
 
                 StringBuilder messages = new StringBuilder();
-                
-                if (commands[0]== "Contains")
+
+                if (commands[0] == "Contains")
                 {
-                    if(codeGenerate.Contains(commands[1]))
+                    if (codeGenerate.Contains(commands[1]))
                     {
                         messages.AppendLine($"{codeGenerate} contains {commands[1]}");
                     }
@@ -37,9 +37,9 @@ namespace _01._Activation_Keys
                         messages.AppendLine("Substring not found!");
                     }
                 }
-                else if(commands[0]=="Flip")
+                else if (commands[0] == "Flip")
                 {
-                    if(commands[1]=="Upper")
+                    if (commands[1] == "Upper")
                     {
                         for (int i = int.Parse(commands[2]); i < int.Parse(commands[3]); i++)
                         {
@@ -51,7 +51,7 @@ namespace _01._Activation_Keys
                         messages.AppendLine(string.Join("", corection));
 
                     }
-                    else if (commands[1]== "Lower")
+                    else if (commands[1] == "Lower")
                     {
                         for (int i = int.Parse(commands[2]); i < int.Parse(commands[3]); i++)
                         {
@@ -60,10 +60,10 @@ namespace _01._Activation_Keys
 
                         }
 
-                        messages.AppendLine(string.Join("",corection));
+                        messages.AppendLine(string.Join("", corection));
                     }
                 }
-                else if(commands[0]== "Slice")
+                else if (commands[0] == "Slice")
                 {
                     for (int i = int.Parse(commands[1]); i < int.Parse(commands[2]); i++)
                     {
@@ -78,7 +78,7 @@ namespace _01._Activation_Keys
                 commands = Console.ReadLine().Split(">>>").ToArray();
             }
 
-            Console.WriteLine($"Your activation key is: {string.Join("",corection)}");
+            Console.WriteLine($"Your activation key is: {string.Join("", corection)}");
 
         }
     }
